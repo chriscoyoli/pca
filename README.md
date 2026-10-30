@@ -18,7 +18,6 @@ Read the **[Usage Guide (PDF)](logo/MBR-PCA-Logo-Usage-Guide.pdf)** for colors, 
 | An embroidery digitizer (patches, shirts) | [Embroidery version](logo/pdf/mbr-pca-logo_embroidery.pdf) | PDF or [SVG](logo/svg/mbr-pca-logo_embroidery.svg) |
 | Updating the website, an email or slides | [Full color PNG, 1024 px](logo/png/mbr-pca-logo_full-color_1024px.png) | PNG, transparent background |
 | Using Word or a tool without transparency | [Full color JPG](logo/jpg/mbr-pca-logo_full-color_2048px_white-background.jpg) | JPG, white background |
-| Making a one-color item (etching, vinyl, engraving) | [Black](logo/pdf/mbr-pca-logo_one-color-black.pdf) or [White](logo/pdf/mbr-pca-logo_one-color-white.pdf) | PDF, SVG, EPS |
 | Setting the website icon | [favicon folder](logo/favicon/) | ICO and PNG |
 
 ## Versions
@@ -28,8 +27,6 @@ Read the **[Usage Guide (PDF)](logo/MBR-PCA-Logo-Usage-Guide.pdf)** for colors, 
 | **Full color** | Primary logo, with metallic gold rings |
 | **Flat color** | Solid spot colors: enamel badges, screen printing, vinyl |
 | **Embroidery** | Fewer colors and no fine lines: patches and apparel |
-| **Grayscale** | Black-and-white printing only |
-| **One color, black / white** | Etching, engraving, single-color decals; white for dark backgrounds |
 | **Full color, MIRRORED** | Inside-glass window decals, **only if the printer asks for pre-mirrored art** |
 
 Each version comes as SVG, PDF and EPS (vector, any size) plus PNG at several sizes.

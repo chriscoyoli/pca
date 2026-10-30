@@ -11,17 +11,17 @@
 <style>
   :root {
     --bg: #FAF8EF; --card: #FFFFFF; --ink: #2B2117; --muted: #6B5E50; --brown: #684622;
-    --gold: #DBB04E; --rule: #E7DFC9; --chip: #F3EEDC; --dark-tile: #3A3A3A;
+    --gold: #DBB04E; --rule: #E7DFC9; --chip: #F3EEDC;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #1C1814; --card: #26211C; --ink: #F1EADB; --muted: #B5A893; --brown: #E3C185;
-      --gold: #DBB04E; --rule: #3B342C; --chip: #312A23; --dark-tile: #111;
+      --gold: #DBB04E; --rule: #3B342C; --chip: #312A23;
     }
   }
   :root[data-theme="dark"] {
     --bg: #1C1814; --card: #26211C; --ink: #F1EADB; --muted: #B5A893; --brown: #E3C185;
-    --gold: #DBB04E; --rule: #3B342C; --chip: #312A23; --dark-tile: #111;
+    --gold: #DBB04E; --rule: #3B342C; --chip: #312A23;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink);
@@ -41,8 +41,7 @@
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
   .card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
   .card .art { background: #fff; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
-  .card .art.dark { background: var(--dark-tile); }
-  .card img { width: 100%; height: auto; display: block; }
+    .card img { width: 100%; height: auto; display: block; }
   .card h3 { margin: 0 0 4px; font-size: 16px; }
   .card p { font-size: 14px; color: var(--muted); }
   .links { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -90,7 +89,6 @@
     <tr><td>A printer, sign shop or enamel badge maker</td><td>Full color or flat color, as PDF, SVG or EPS</td></tr>
     <tr><td>An embroidery digitizer</td><td>Embroidery version, as PDF or SVG</td></tr>
     <tr><td>Updating the website, an email or slides</td><td>Full color PNG (transparent), 1024 px</td></tr>
-    <tr><td>Making an etched, engraved or one-color item</td><td>One color black or white, as PDF, SVG or EPS</td></tr>
     <tr><td>Printing a decal for the inside of a window</td><td>Normal full color file; mirrored file only if the printer asks</td></tr>
   </table>
   </div>
@@ -116,9 +114,6 @@
     ["full-color", "Full color", "Primary logo with metallic gold rings.", [4096, 2048, 1024, 512, 256]],
     ["flat-color", "Flat color", "Solid spot colors for enamel, screen print and vinyl.", [4096, 2048, 1024]],
     ["embroidery", "Embroidery", "Fewer colors, no fine lines. Patches and apparel.", [4096, 2048, 1024]],
-    ["grayscale", "Grayscale", "Black-and-white printing only.", [2048, 1024]],
-    ["one-color-black", "One color, black", "Etching, engraving, single-color decals.", [4096, 2048, 1024]],
-    ["one-color-white", "One color, white", "For dark backgrounds and dark shirts.", [4096, 2048, 1024]],
     ["full-color-MIRRORED-for-inside-glass", "Full color, mirrored",
      "Inside-glass decals, only if the printer asks for pre-mirrored art.", [4096]],
   ];
@@ -130,7 +125,7 @@
     const pngLinks = sizes.map(s => `<a href="${base}png/${f(k)}_${s}px.png" download>PNG ${s}</a>`).join("");
     grid.insertAdjacentHTML("beforeend", `
       <div class="card">
-        <div class="art${k.includes("white") ? " dark" : ""}"><img loading="lazy"
+        <div class="art"><img loading="lazy"
           src="${base}png/${f(k)}_${smallest}px.png" alt="${name} version"></div>
         <h3>${name}</h3><p>${desc}</p>
         <div class="links">

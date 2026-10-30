@@ -104,16 +104,14 @@ S.append(P("Versions", h2))
 keys = [("full-color", "Full color", "Primary logo. Metallic gold rings."),
         ("flat-color", "Flat color", "Solid spot colors. Enamel, screen print, vinyl."),
         ("embroidery", "Embroidery", "Fewer colors, no fine lines. Patches, apparel."),
-        ("grayscale", "Grayscale", "Black and white printing only."),
-        ("one-color-black", "One color, black", "Etching, engraving, single-color decals."),
-        ("one-color-white", "One color, white", "On dark backgrounds and dark shirts.")]
+        ("full-color-MIRRORED-for-inside-glass", "Mirrored",
+         "Inside-glass decals, only if the printer asks.")]
 imgs, caps = [], []
 for k, n, d in keys:
-    imgs.append(Image(png(k, 1024), width=0.9 * inch, height=0.9 * inch))
+    imgs.append(Image(png(k, 4096 if "MIRRORED" in k else 1024), width=1.15 * inch, height=1.15 * inch))
     caps.append(P(f"<b>{n}</b><br/>{d}", cap))
-vt = Table([imgs, caps], colWidths=[W / 6] * 6)
+vt = Table([imgs, caps], colWidths=[W / 4] * 4)
 vt.setStyle(TableStyle([("ALIGN", (0, 0), (-1, -1), "CENTER"), ("VALIGN", (0, 1), (-1, 1), "TOP"),
-                        ("BACKGROUND", (5, 0), (5, 0), colors.HexColor("#3C3C3C")),
                         ("LEFTPADDING", (0, 0), (-1, -1), 3), ("RIGHTPADDING", (0, 0), (-1, -1), 3)]))
 S.append(vt)
 
@@ -141,8 +139,7 @@ sz = [[P("Use", cellb), P("Minimum size", cellb)],
       [P("Full or flat color, print", cell), P("1 inch (25 mm) across", cell)],
       [P("Screen and web", cell), P("120 pixels across (lettering becomes hard to read below this)", cell)],
       [P("Embroidered patch", cell), P("3 inches (76 mm) across; 3.5 inches recommended", cell)],
-      [P("Grille badge (enamel)", cell), P("2.75 inches (70 mm) across", cell)],
-      [P("One color (etching, vinyl)", cell), P("1.5 inches (38 mm) across, so the scene lines hold", cell)]]
+      [P("Grille badge (enamel)", cell), P("2.75 inches (70 mm) across", cell)]]
 S.append(grid(sz, [2.4 * inch, W - 2.4 * inch]))
 S.append(Spacer(1, 4))
 S.append(P("<b>Clear space:</b> keep other text and graphics at least one tenth of the logo's diameter away "
@@ -150,10 +147,10 @@ S.append(P("<b>Clear space:</b> keep other text and graphics at least one tenth 
 
 S.append(P("Do not", h2))
 for x in ["Stretch, squash, rotate or crop the logo.",
-          "Change the colors, except by using the grayscale or one-color versions.",
+          "Change the colors or convert the logo to black and white.",
           "Add effects such as drop shadows, glows, outlines or bevels.",
           "Retype the lettering or swap the font.",
-          "Place the full-color logo on busy photos; use a plain background or the white version.",
+          "Place the logo on busy photos; use a plain background.",
           "Add Porsche AG marks such as the Porsche crest, the Porsche script or model badges.",
           "Use the earlier versions (the old window sticker, the “P C A” version, or images marked "
           "EXAMPLE). This file set replaces them."]:
