@@ -3,112 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PCA Monterey Bay Region Logo</title>
-<meta name="description" content="Official logo files for the Monterey Bay Region, Porsche Club of America.">
+<title>PCA Monterey Bay Region Logo: Usage Guide</title>
+<meta name="description" content="Official logo files and usage guide for the Monterey Bay Region, Porsche Club of America.">
 <link rel="icon" href="logo/favicon/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" href="logo/favicon/apple-touch-icon.png">
 <style>
+  /* Styled to match mby.pca.org (Bootstrap 5 defaults, navy navbar, amber active link, dark red links) */
   :root {
-    --bg: #FAF8EF; --card: #FFFFFF; --ink: #2B2117; --muted: #6B5E50; --brown: #684622;
-    --gold: #DBB04E; --rule: #E7DFC9; --chip: #F3EEDC;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #1C1814; --card: #26211C; --ink: #F1EADB; --muted: #B5A893; --brown: #E3C185;
-      --gold: #DBB04E; --rule: #3B342C; --chip: #312A23;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #1C1814; --card: #26211C; --ink: #F1EADB; --muted: #B5A893; --brown: #E3C185;
-    --gold: #DBB04E; --rule: #3B342C; --chip: #312A23;
+    --navy: #253D90; --amber: #FFC107; --link: #900000; --text: #212529; --muted: #6C757D;
+    --rule: #DEE2E6; --light: #F8F9FA; --white: #FFFFFF;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 1000px; margin: 0 auto; padding: 40px 16px 64px; }
-  header { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: center; }
-  header img { width: 100%; height: auto; }
-  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; color: var(--brown); }
-  h2 { font-size: 20px; margin: 40px 0 12px; color: var(--brown); border-bottom: 2px solid var(--gold);
-       padding-bottom: 6px; }
-  p { margin: 0 0 12px; }
-  .muted { color: var(--muted); }
-  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  a.btn { display: inline-block; padding: 10px 16px; border-radius: 8px; text-decoration: none;
-          font-weight: 600; background: var(--brown); color: var(--bg); }
-  a.btn.alt { background: transparent; color: var(--brown); border: 1.5px solid var(--brown); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
-  .card .art { background: #fff; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
-    .card img { width: 100%; height: auto; display: block; }
-  .card h3 { margin: 0 0 4px; font-size: 16px; }
-  .card p { font-size: 14px; color: var(--muted); }
+  body { margin: 0; background: var(--white); color: var(--text);
+         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+                      "Liberation Sans", Arial, sans-serif;
+         font-size: 16px; line-height: 1.5; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 16px; }
+
+  /* navbar */
+  .navbar { background: var(--navy); padding: 8px 0; }
+  .navbar .container { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+                       min-height: 113px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 14px; color: var(--white); }
+  .brand:hover { text-decoration: none; }
+  .brand img { width: 84px; height: 84px; }
+  .brand span { font-size: 22px; line-height: 1.2; font-weight: 500; }
+  .brand small { display: block; font-size: 15px; opacity: .85; font-weight: 400; }
+  .nav { display: flex; flex-wrap: wrap; gap: 4px 20px; list-style: none; margin: 0; padding: 0; }
+  .nav a { color: var(--white); font-size: 18.4px; padding: 8px 0; }
+  .nav a.active { color: var(--amber); }
+  .nav a:hover { color: var(--amber); text-decoration: none; }
+
+  /* content */
+  main { padding: 32px 0 48px; }
+  h1 { font-size: 24px; font-weight: 500; line-height: 1.2; margin: 0 0 20px; }
+  h2 { font-size: 20px; font-weight: 500; line-height: 1.2; margin: 40px 0 16px; padding-bottom: 8px;
+       border-bottom: 1px solid var(--rule); }
+  p { margin: 0 0 16px; }
+  .intro { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: start; }
+  .intro img { width: 100%; height: auto; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .btn { display: inline-block; padding: 8px 16px; border-radius: 6px; border: 1px solid var(--navy);
+         font-weight: 500; }
+  .btn-primary { background: var(--navy); color: var(--white); }
+  .btn-outline { color: var(--navy); background: var(--white); }
+  .btn:hover { text-decoration: none; opacity: .88; }
+  .note { background: var(--light); border-left: 4px solid var(--navy); padding: 12px 16px; border-radius: 4px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .card { border: 1px solid var(--rule); border-radius: 6px; padding: 16px; background: var(--white); }
+  .card img { width: 100%; height: auto; display: block; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 4px; font-size: 18px; font-weight: 500; }
+  .card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
   .links { display: flex; flex-wrap: wrap; gap: 6px; }
-  .links a { font-size: 13px; padding: 3px 9px; border-radius: 999px; background: var(--chip);
-             color: var(--ink); text-decoration: none; }
-  .links a:hover, a.btn:hover { opacity: .85; }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; }
-  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  th { color: var(--muted); font-weight: 600; font-size: 13px; }
-  .sw { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--rule); }
-  code { font-size: 14px; }
+  .links a { font-size: 13px; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--rule);
+             color: var(--navy); background: var(--light); }
+
   .table-wrap { overflow-x: auto; }
-  footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
-  @media (max-width: 640px) {
-    header { grid-template-columns: 1fr; gap: 16px; }
-    header img { max-width: 200px; }
-    h1 { font-size: 24px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; background: var(--light); }
+  .sw { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--rule); }
+  code { font-size: 14px; color: var(--text); }
+
+  footer { border-top: 1px solid var(--rule); padding: 24px 0; font-size: 15px; }
+  footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+  @media (max-width: 768px) {
+    .navbar .container { min-height: 0; padding-top: 8px; padding-bottom: 8px; }
+    .brand img { width: 64px; height: 64px; }
+    .brand span { font-size: 18px; }
+    .nav a { font-size: 16px; }
+    .intro { grid-template-columns: 1fr; gap: 16px; }
+    .intro img { max-width: 200px; }
   }
 </style>
 </head>
 <body>
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" href="./">
+      <img src="logo/png/mbr-pca-logo_full-color_256px.png" alt="">
+      <span>Monterey Bay Region<small>Porsche Club of America</small></span>
+    </a>
+    <ul class="nav">
+      <li><a class="active" href="./">Logo</a></li>
+      <li><a href="#versions">Versions</a></li>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="logo/MBR-PCA-Logo-Usage-Guide.pdf">Usage Guide (PDF)</a></li>
+      <li><a href="https://mby.pca.org/">mby.pca.org</a></li>
+    </ul>
+  </div>
+</nav>
+
 <main>
-  <header>
-    <img src="logo/png/mbr-pca-logo_full-color_512px.png" alt="PCA Monterey Bay Region logo">
-    <div>
-      <h1>PCA Monterey Bay Region logo</h1>
-      <p>The official logo of the Monterey Bay Region, Porsche Club of America, approved unanimously by the
-        Board of Directors on October 26, 2026.</p>
-      <p class="muted">Vendors: use only these files. They replace all earlier versions, including any image
-        marked EXAMPLE.</p>
-      <div class="btns">
-        <a class="btn" href="https://github.com/chriscoyoli/pca/archive/refs/heads/main.zip">Download all files (ZIP)</a>
-        <a class="btn alt" href="logo/MBR-PCA-Logo-Usage-Guide.pdf">Usage guide (PDF)</a>
+  <div class="container">
+    <h1>PCA Monterey Bay Region Logo: Usage Guide</h1>
+    <div class="intro">
+      <img src="logo/png/mbr-pca-logo_full-color_512px.png" alt="PCA Monterey Bay Region logo">
+      <div>
+        <p>The official logo of the Monterey Bay Region, Porsche Club of America, approved unanimously by the
+          Board of Directors on October 26, 2026.</p>
+        <p>A red Porsche 356 drives toward a California live oak, with the Carmel Valley and Big Sur ridgeline
+          and Monterey Bay beyond.</p>
+        <p class="note">Vendors: use only these files. They replace all earlier versions, including any image
+          marked EXAMPLE.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://github.com/chriscoyoli/pca/archive/refs/heads/main.zip">Download all files (ZIP)</a>
+          <a class="btn btn-outline" href="logo/MBR-PCA-Logo-Usage-Guide.pdf">Usage Guide (PDF)</a>
+        </div>
       </div>
     </div>
-  </header>
 
-  <h2>Versions</h2>
-  <div class="grid" id="versions"></div>
+    <h2 id="versions">Versions</h2>
+    <div class="grid" id="version-grid"></div>
 
-  <h2>Which file do I need?</h2>
-  <div class="table-wrap">
-  <table>
-    <tr><th>You are</th><th>Use</th></tr>
-    <tr><td>A printer, sign shop or enamel badge maker</td><td>Full color or flat color, as PDF, SVG or EPS</td></tr>
-    <tr><td>An embroidery digitizer</td><td>Embroidery version, as PDF or SVG</td></tr>
-    <tr><td>Updating the website, an email or slides</td><td>Full color PNG (transparent), 1024 px</td></tr>
-    <tr><td>Printing a decal for the inside of a window</td><td>Normal full color file; mirrored file only if the printer asks</td></tr>
-  </table>
+    <h2>Which file do I need?</h2>
+    <div class="table-wrap">
+    <table>
+      <tr><th>You are</th><th>Use</th></tr>
+      <tr><td>A printer, sign shop or enamel badge maker</td><td>Full color or flat color, as PDF, SVG or EPS</td></tr>
+      <tr><td>An embroidery digitizer</td><td>Embroidery version, as PDF or SVG</td></tr>
+      <tr><td>Updating the website, an email or slides</td><td>Full color PNG (transparent), 1024 px</td></tr>
+      <tr><td>Using Word or a tool without transparency</td><td>Full color JPG on a white background</td></tr>
+      <tr><td>Printing a decal for the inside of a window</td><td>Normal full color file; mirrored file only if the printer asks</td></tr>
+    </table>
+    </div>
+
+    <h2 id="colors">Official colors</h2>
+    <div class="table-wrap">
+    <table id="color-table"><tr><th></th><th>Color</th><th>HEX</th><th>RGB</th></tr></table>
+    </div>
+    <p style="margin-top:12px">For paint and enamel, match the 356 to Porsche Guards Red (paint code 80K) on a
+      physical proof. CMYK starting values are in the <a href="logo/MBR-PCA-Logo-Usage-Guide.pdf">usage guide</a>.</p>
+
+    <h2>Use and permissions</h2>
+    <p>This is the Monterey Bay Region's own logo. The region may use its authorized PCA and Monterey Bay Region
+      logos but must not use artwork outside the permissions already granted. Vendors may use these files only to
+      produce approved region items. Please do not stretch, recolor, crop, retype or add effects to the logo, and
+      do not add Porsche AG marks such as the Porsche crest or script.</p>
+    <p>Questions: Chris Coyoli, <a href="mailto:chris@coyoli.com">chris@coyoli.com</a></p>
   </div>
-
-  <h2>Official colors</h2>
-  <div class="table-wrap">
-  <table id="colors"><tr><th></th><th>Color</th><th>HEX</th><th>RGB</th></tr></table>
-  </div>
-  <p class="muted" style="margin-top:10px">For paint and enamel, match the 356 to Porsche Guards Red (paint code
-    80K) on a physical proof. CMYK starting values are in the usage guide.</p>
-
-  <h2>Use and permissions</h2>
-  <p>This is the Monterey Bay Region's own logo. The region may use its authorized PCA and Monterey Bay Region
-    logos but must not use artwork outside the permissions already granted. Vendors may use these files only to
-    produce approved region items. Please do not stretch, recolor, crop, retype or add effects to the logo, and
-    do not add Porsche AG marks such as the Porsche crest or script.</p>
-
-  <footer>Questions: Chris Coyoli, <a href="mailto:chris@coyoli.com">chris@coyoli.com</a> &nbsp;|&nbsp;
-    <a href="https://github.com/chriscoyoli/pca">Source on GitHub</a></footer>
 </main>
+
+<footer>
+  <div class="container">
+    <span>&copy; 2026 Monterey Bay Region - Porsche Club of America</span>
+    <a href="https://github.com/chriscoyoli/pca">Source files on GitHub</a>
+  </div>
+</footer>
+
 <script>
   const V = [
     ["full-color", "Full color", "Primary logo with metallic gold rings.", [4096, 2048, 1024, 512, 256]],
@@ -117,28 +164,25 @@
     ["full-color-MIRRORED-for-inside-glass", "Full color, mirrored",
      "Inside-glass decals, only if the printer asks for pre-mirrored art.", [4096]],
   ];
-  const base = "logo/";
-  const f = k => "mbr-pca-logo_" + k;
-  const grid = document.getElementById("versions");
+  const f = k => "logo/png/mbr-pca-logo_" + k;
+  const grid = document.getElementById("version-grid");
   for (const [k, name, desc, sizes] of V) {
-    const smallest = sizes[sizes.length - 1];
-    const pngLinks = sizes.map(s => `<a href="${base}png/${f(k)}_${s}px.png" download>PNG ${s}</a>`).join("");
+    const thumb = `${f(k)}_${sizes[sizes.length - 1]}px.png`;
+    const pngs = sizes.map(s => `<a href="${f(k)}_${s}px.png" download>PNG ${s}</a>`).join("");
+    const v = "logo/{t}/mbr-pca-logo_" + k + ".{t}";
     grid.insertAdjacentHTML("beforeend", `
       <div class="card">
-        <div class="art"><img loading="lazy"
-          src="${base}png/${f(k)}_${smallest}px.png" alt="${name} version"></div>
+        <img loading="lazy" src="${thumb}" alt="${name} version">
         <h3>${name}</h3><p>${desc}</p>
         <div class="links">
-          <a href="${base}svg/${f(k)}.svg" download>SVG</a>
-          <a href="${base}pdf/${f(k)}.pdf" download>PDF</a>
-          <a href="${base}eps/${f(k)}.eps" download>EPS</a>${pngLinks}
+          ${["svg", "pdf", "eps"].map(t => `<a href="${v.replaceAll("{t}", t)}" download>${t.toUpperCase()}</a>`).join("")}${pngs}
         </div>
       </div>`);
   }
   const C = [["DBB04E","Gold rings"],["EEECC6","Ivory band"],["684622","Lettering"],["AEDDE3","Sky"],
     ["2274B5","Monterey Bay"],["652D90","Ridge, back"],["77438F","Ridge, middle"],["A14C8F","Ridge, front"],
     ["198E47","Grass"],["0E663E","Live oak"],["603918","Oak trunk"],["EFE3C6","Road"],["E82124","356, Guards Red"]];
-  const t = document.getElementById("colors");
+  const t = document.getElementById("color-table");
   for (const [h, n] of C) {
     const rgb = [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)).join(", ");
     t.insertAdjacentHTML("beforeend",
