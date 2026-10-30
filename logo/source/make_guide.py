@@ -63,7 +63,7 @@ def deco(c, doc):
     c.setStrokeColor(RULE); c.setLineWidth(0.6)
     c.line(0.75 * inch, 0.72 * inch, w - 0.75 * inch, 0.72 * inch)
     c.setFont("Ital", 7.6)
-    c.drawString(0.75 * inch, 0.52 * inch, "Files: github.com/chriscoyoli/pca  |  Questions: Chris Coyoli, "
+    c.drawString(0.75 * inch, 0.52 * inch, "Files: pca.carmelvalleytechnologies.com  |  Questions: Chris Coyoli, "
                                            "chris@coyoli.com")
     c.drawRightString(w - 0.75 * inch, 0.52 * inch, f"Page {doc.page} of 2")
     c.restoreState()

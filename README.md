@@ -4,6 +4,8 @@
 
 The official logo of the **Monterey Bay Region, Porsche Club of America**, approved unanimously by the Board of Directors on **October 26, 2026**.
 
+**Download page:** [pca.carmelvalleytechnologies.com](https://pca.carmelvalleytechnologies.com/)
+
 Read the **[Usage Guide (PDF)](logo/MBR-PCA-Logo-Usage-Guide.pdf)** for colors, minimum sizes, clear space and what not to do.
 
 **Download everything:** [ZIP of all files](https://github.com/chriscoyoli/pca/archive/refs/heads/main.zip)
